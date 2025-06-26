@@ -1,7 +1,7 @@
 <h1>Azure Network Traffic Analysis Lab</h1>
 
 <h2>Description</h2>
-<p>This project simulates real-world IT scenarios by creating two virtual machines (Windows and Linux) in Microsoft Azure, then analyzing network traffic using Wireshark. It includes observing common protocols like ICMP, SSH, DNS, DHCP, and RDP. The lab demonstrates the use of Remote Desktop, packet sniffing, basic firewall configuration, and secure shell access within a controlled cloud environment.</p>
+<p>This project simulates real-world IT scenarios by creating two virtual machines (Windows and Linux) in Microsoft Azure, then analyzing network traffic using Wireshark. It includes observing common protocols like ICMP, SSH, DNS, DHCP, and RDP.</p>
 
 <h2>Environments and Technologies Used</h2>
 <ul>
