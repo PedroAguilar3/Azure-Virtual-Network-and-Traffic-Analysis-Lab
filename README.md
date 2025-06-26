@@ -44,41 +44,47 @@
 <p>I created a new Resource Group and deployed a Windows 10 and Ubuntu Virtual Machine. During setup, I allowed Azure to automatically create a new Virtual Network and Subnet.</p>
 
 <h3>2. Adding the Ubuntu VM to the Same Network</h3>
-<img src="C:\Users\14243\OneDrive\Desktop\PEDRO\FinalProject\creaciondegrupo.png" alt="Creating Ubuntu VM in same VNet" width="600"/>
+<img src="https://i.imgur.com/SzSmFFm.png" alt="Creating Ubuntu VM in same VNet" width="600"/>
 <p>I deployed an Ubuntu VM into the same Resource Group and selected the same Virtual Network created earlier. Both VMs are now in the same subnet.</p>
 
-<h3>3. Installing and Using Wireshark</h3>
-<img src="ruta/a/tu/imagen3.png" alt="Installing Wireshark" width="600"/>
+<h3>3. Connecting to the Windows 10 VM via Remote Desktop</h3>
+<img src="https://i.imgur.com/uc8W0zU.png" alt="Remote Desktop Connection to Windows VM" width="600"/>
+<p>After both virtual machines were created in Azure, I connected to the Windows 10 VM using <strong>Remote Desktop Connection (RDP)</strong>.</p>
+<p>I used the public IP address provided in the Azure portal, along with the username and password set during VM creation. This allowed me to access the Windows desktop environment remotely from my local computer.</p>
+<p>Once connected, I was able to begin installing and running tools like Wireshark, PowerShell, and initiate traffic toward the Ubuntu VM for analysis.</p>
+
+<h3>4. Installing and Using Wireshark</h3>
+<img src="https://i.imgur.com/tCca6TI.png" alt="Installing Wireshark" width="600"/>
 <p>Connected to the Windows VM via RDP and installed Wireshark to capture and analyze network traffic.</p>
 
-<h3>4. Observing ICMP Traffic</h3>
+<h3>5. Observing ICMP Traffic</h3>
 <img src="ruta/a/tu/imagen4.png" alt="ICMP Ping Ubuntu" width="600"/>
 <p>Started a packet capture in Wireshark and filtered by ICMP. I pinged the Ubuntu VM’s private IP from the Windows VM and observed the requests and replies.</p>
 
-<h3>5. Observing Public Ping Traffic</h3>
+<h3>6. Observing Public Ping Traffic</h3>
 <img src="ruta/a/tu/imagen5.png" alt="Public Ping Google" width="600"/>
 <p>Used PowerShell to ping www.google.com and observed the ICMP packets to and from the public address in Wireshark.</p>
 
-<h3>6. Configuring Network Security Group (Firewall)</h3>
+<h3>7. Configuring Network Security Group (Firewall)</h3>
 <img src="ruta/a/tu/imagen6.png" alt="NSG Blocking ICMP" width="600"/>
 <p>Initiated a continuous ping from Windows to Ubuntu, then modified the Ubuntu VM’s Network Security Group to block inbound ICMP traffic. Observed that the ping failed and no ICMP packets were seen in Wireshark.</p>
 
-<h3>7. Re-Enabling ICMP Traffic</h3>
+<h3>8. Re-Enabling ICMP Traffic</h3>
 <img src="ruta/a/tu/imagen7.png" alt="NSG Allowing ICMP" width="600"/>
 <p>Re-enabled ICMP in the NSG. Verified that the ping resumed and ICMP packets were visible again in Wireshark.</p>
 
-<h3>8. Observing SSH Traffic</h3>
+<h3>9. Observing SSH Traffic</h3>
 <img src="ruta/a/tu/imagen8.png" alt="SSH Traffic Wireshark" width="600"/>
 <p>Filtered Wireshark for SSH traffic. Used PowerShell in Windows to SSH into the Ubuntu VM using its private IP, then executed basic commands to observe encrypted SSH communication.</p>
 
-<h3>9. Observing DHCP Traffic</h3>
+<h3>10. Observing DHCP Traffic</h3>
 <img src="ruta/a/tu/imagen9.png" alt="DHCP Traffic Renew" width="600"/>
 <p>Filtered for DHCP in Wireshark. Ran <code>ipconfig /renew</code> in PowerShell to request a new IP address and observed the DHCP request and response traffic.</p>
 
-<h3>10. Observing DNS Traffic</h3>
+<h3>11 Observing DNS Traffic</h3>
 <img src="ruta/a/tu/imagen10.png" alt="DNS Lookup Traffic" width="600"/>
 <p>Filtered for DNS traffic. Used <code>nslookup</code> to query domains like google.com and disney.com and confirmed DNS requests and responses in Wireshark.</p>
 
-<h3>11. Observing RDP Traffic</h3>
+<h3>12 Observing RDP Traffic</h3>
 <img src="ruta/a/tu/imagen11.png" alt="RDP Wireshark" width="600"/>
 <p>Filtered for RDP traffic using <code>tcp.port == 3389</code>. Verified the presence of RDP packets during the remote desktop session to the Windows VM.</p>
