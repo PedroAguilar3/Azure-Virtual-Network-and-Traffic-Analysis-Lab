@@ -85,7 +85,7 @@
 <p>Filtered for DHCP in Wireshark. Ran ipconfig /renew in PowerShell to request a new IP address and observed the DHCP request and response traffic.</p>
 
 <h3>11 Observing DNS Traffic</h3>
-<img src="https://i.imgur.com/AYosR25.png" alt="DNS Lookup Traffic" width="600"/>
+<img src="https://i.imgur.com/mcXuIj4.png" alt="DNS Lookup Traffic" width="600"/>
 <p>Filtered for DNS traffic. Used nslookup to query domains like google.com and disney.com and confirmed DNS requests and responses in Wireshark.</p>
 
 <h3>12 Observing RDP Traffic</h3>
