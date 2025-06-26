@@ -58,33 +58,36 @@
 <p>Connected to the Windows VM via RDP and installed Wireshark to capture and analyze network traffic.</p>
 
 <h3>5. Observing ICMP Traffic</h3>
-<img src="ruta/a/tu/imagen4.png" alt="ICMP Ping Ubuntu" width="600"/>
+<img src="https://i.imgur.com/nTaSt4t.png" alt="ICMP Ping Ubuntu" width="600"/>
 <p>Started a packet capture in Wireshark and filtered by ICMP. I pinged the Ubuntu VM’s private IP from the Windows VM and observed the requests and replies.</p>
 
 <h3>6. Observing Public Ping Traffic</h3>
-<img src="ruta/a/tu/imagen5.png" alt="Public Ping Google" width="600"/>
+<img src="https://i.imgur.com/XckY1Ip.png" alt="Public Ping Google" width="600"/>
 <p>Used PowerShell to ping www.google.com and observed the ICMP packets to and from the public address in Wireshark.</p>
 
 <h3>7. Configuring Network Security Group (Firewall)</h3>
-<img src="ruta/a/tu/imagen6.png" alt="NSG Blocking ICMP" width="600"/>
+<img src="https://i.imgur.com/iIjo2l0.png" alt="NSG Blocking ICMP" width="600"/>
+<img src="https://i.imgur.com/hrDbT5n.png" alt="NSG Blocking ICMP" width="600"/>
 <p>Initiated a continuous ping from Windows to Ubuntu, then modified the Ubuntu VM’s Network Security Group to block inbound ICMP traffic. Observed that the ping failed and no ICMP packets were seen in Wireshark.</p>
+<img src="https://i.imgur.com/6LVUzyg.png" alt="NSG Blocking ICMP" width="600"/>
 
 <h3>8. Re-Enabling ICMP Traffic</h3>
-<img src="ruta/a/tu/imagen7.png" alt="NSG Allowing ICMP" width="600"/>
+<img src="https://i.imgur.com/6jKbIlw.png" alt="NSG Allowing ICMP" width="600"/>
+<img src="https://i.imgur.com/Vgdc7G9.png" alt="NSG Allowing ICMP" width="600"/>
 <p>Re-enabled ICMP in the NSG. Verified that the ping resumed and ICMP packets were visible again in Wireshark.</p>
 
 <h3>9. Observing SSH Traffic</h3>
-<img src="ruta/a/tu/imagen8.png" alt="SSH Traffic Wireshark" width="600"/>
+<img src="https://i.imgur.com/X7tQr4w.png" alt="SSH Traffic Wireshark" width="600"/>
 <p>Filtered Wireshark for SSH traffic. Used PowerShell in Windows to SSH into the Ubuntu VM using its private IP, then executed basic commands to observe encrypted SSH communication.</p>
 
 <h3>10. Observing DHCP Traffic</h3>
-<img src="ruta/a/tu/imagen9.png" alt="DHCP Traffic Renew" width="600"/>
+
 <p>Filtered for DHCP in Wireshark. Ran <code>ipconfig /renew</code> in PowerShell to request a new IP address and observed the DHCP request and response traffic.</p>
 
 <h3>11 Observing DNS Traffic</h3>
-<img src="ruta/a/tu/imagen10.png" alt="DNS Lookup Traffic" width="600"/>
+<img src="https://i.imgur.com/AYosR25.png" alt="DNS Lookup Traffic" width="600"/>
 <p>Filtered for DNS traffic. Used <code>nslookup</code> to query domains like google.com and disney.com and confirmed DNS requests and responses in Wireshark.</p>
 
 <h3>12 Observing RDP Traffic</h3>
-<img src="ruta/a/tu/imagen11.png" alt="RDP Wireshark" width="600"/>
+<img src="https://i.imgur.com/hEOTxCO.png" alt="RDP Wireshark" width="600"/>
 <p>Filtered for RDP traffic using <code>tcp.port == 3389</code>. Verified the presence of RDP packets during the remote desktop session to the Windows VM.</p>
