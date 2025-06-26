@@ -82,12 +82,12 @@
 
 <h3>10. Observing DHCP Traffic</h3>
 
-<p>Filtered for DHCP in Wireshark. Ran <code>ipconfig /renew</code> in PowerShell to request a new IP address and observed the DHCP request and response traffic.</p>
+<p>Filtered for DHCP in Wireshark. Ran ipconfig /renew in PowerShell to request a new IP address and observed the DHCP request and response traffic.</p>
 
 <h3>11 Observing DNS Traffic</h3>
 <img src="https://i.imgur.com/AYosR25.png" alt="DNS Lookup Traffic" width="600"/>
-<p>Filtered for DNS traffic. Used <code>nslookup</code> to query domains like google.com and disney.com and confirmed DNS requests and responses in Wireshark.</p>
+<p>Filtered for DNS traffic. Used nslookup to query domains like google.com and disney.com and confirmed DNS requests and responses in Wireshark.</p>
 
 <h3>12 Observing RDP Traffic</h3>
 <img src="https://i.imgur.com/hEOTxCO.png" alt="RDP Wireshark" width="600"/>
-<p>Filtered for RDP traffic using <code>tcp.port == 3389</code>. Verified the presence of RDP packets during the remote desktop session to the Windows VM.</p>
+<p>Filtered for RDP traffic using tcp.port == 3389. Verified the presence of RDP packets during the remote desktop session to the Windows VM.</p>
