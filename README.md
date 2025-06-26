@@ -37,7 +37,7 @@
 <h2>Deployment and Configuration Steps</h2>
 
 <h3>1. Creating the Virtual Machines in Azure</h3>
-<img src="<img src="images/vm-creation.png" alt="Creating Windows VM in Azure" width="600"/>" alt="Creating Windows VM in Azure" width="600"/>
+<img src="C:\Users\14243\OneDrive\Desktop\FinalProject.creaciondegrupo.png\" alt="Creating Windows VM in Azure" width="600"/>
 <p>I created a new Resource Group and deployed a Windows 10 Virtual Machine. During setup, I allowed Azure to automatically create a new Virtual Network and Subnet.</p>
 
 <h3>2. Adding the Ubuntu VM to the Same Network</h3>
